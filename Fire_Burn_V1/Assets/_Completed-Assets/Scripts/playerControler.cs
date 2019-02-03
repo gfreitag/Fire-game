@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class playerControler : MonoBehaviour
 {
+    public Transform gameobject;
 
     //public float movementSpeed = 10;
     // Start is called before the first frame update
     void Start()
 
     {
+
 
 
 
@@ -46,6 +48,23 @@ public class playerControler : MonoBehaviour
         }
 
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        //If the object we collided with a tree
+        Debug.Log("OnCollisionEnter2D");
+        if (collision2D.gameObject.tag=="Tree")
+        {
+            Destroy(collision2D.collider.gameObject);
+        }
+
+       
+    }
+
+
+
+
 
 
 
