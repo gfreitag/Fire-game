@@ -22,25 +22,25 @@ public class playerControler : MonoBehaviour
     void Update()
     {
         //transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             Vector3 position = this.transform.position;
             position.x--;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             Vector3 position = this.transform.position;
             position.x++;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             Vector3 position = this.transform.position;
             position.y++;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Vector3 position = this.transform.position;
             position.y--;
