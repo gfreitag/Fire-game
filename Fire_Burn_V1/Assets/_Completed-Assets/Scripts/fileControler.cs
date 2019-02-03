@@ -57,7 +57,7 @@ public class fileControler : MonoBehaviour
         if (collision2D.gameObject.tag == "Tree")
         {
             Destroy(collision2D.collider.gameObject);
-            gameObject.transform.localScale += new Vector3(1, 1, 1);
+            gameObject.transform.localScale += new Vector3(0.2f, 0.2f, 0.2f);
         }
 
         if (collision2D.gameObject.tag == "water")
@@ -65,6 +65,16 @@ public class fileControler : MonoBehaviour
             Destroy(collision2D.collider.gameObject);
             gameObject.transform.localScale -= new Vector3(0.2f,0.2f,0.2f);
         }
+
+
+        if (collision2D.gameObject.tag == "fireman")
+        {
+
+
+            gameObject.transform.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+        }
+
+
 
 
     }

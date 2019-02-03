@@ -22,25 +22,25 @@ public class playerControler : MonoBehaviour
     void Update()
     {
         //transform.Translate(Vector3.right * movementSpeed * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             Vector3 position = this.transform.position;
             position.x--;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Vector3 position = this.transform.position;
             position.x++;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Vector3 position = this.transform.position;
             position.y++;
             this.transform.position = position;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             Vector3 position = this.transform.position;
             position.y--;
@@ -60,8 +60,19 @@ public class playerControler : MonoBehaviour
             gameObject.transform.localScale += new Vector3(1, 1, 1);
         }
 
-       
+        if (collision2D.gameObject.tag == "fire")
+        {
+           
+
+            gameObject.transform.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+        }
+
+
+
+
     }
+
+
 
 
 
