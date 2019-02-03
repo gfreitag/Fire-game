@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PickUp
   - Tree
+  - water
   layers:
   - Default
   - TransparentFX
