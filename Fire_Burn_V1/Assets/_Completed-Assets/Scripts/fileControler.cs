@@ -1,20 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class fileControler : MonoBehaviour
 {
    // public Transform gameobject;
 
     public float movementSpeed = 10;
+    public Text Fire_lost;
     // Start is called before the first frame update
     void Start()
 
     {
-
-
-
-
+        Fire_lost.text = "";
 
     }
 
@@ -70,8 +69,13 @@ public class fileControler : MonoBehaviour
         if (collision2D.gameObject.tag == "fireman")
         {
 
-
+            Vector3 target = new Vector3(0, 0, 0);
             gameObject.transform.localScale -= new Vector3(0.2f, 0.2f, 0.2f);
+            if(gameObject.transform.localScale== target)
+            {
+
+                Fire_lost.text = "Fire put out!";
+            }
         }
 
 
