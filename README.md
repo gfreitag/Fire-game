@@ -1,3 +1,3 @@
 # Fire-game
 
-A small game created by friends at McHacks 2018.
+A small game created with friends at McHacks 2018.
